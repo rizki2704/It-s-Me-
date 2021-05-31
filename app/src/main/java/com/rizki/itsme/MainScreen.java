@@ -27,10 +27,10 @@ public class MainScreen extends AppCompatActivity {
 
         bnv_Main = findViewById(R.id.bnv_Main);
         bnv_Main.add(new MeowBottomNavigation.Model(1,R.drawable.ic_home));
-        bnv_Main.add(new MeowBottomNavigation.Model(2,R.drawable.ic_music));
-        bnv_Main.add(new MeowBottomNavigation.Model(3,R.drawable.ic_profile));
-        bnv_Main.add(new MeowBottomNavigation.Model(4,R.drawable.running));
-        bnv_Main.add(new MeowBottomNavigation.Model(5,R.drawable.picture));
+        bnv_Main.add(new MeowBottomNavigation.Model(2,R.drawable.running));
+        bnv_Main.add(new MeowBottomNavigation.Model(3,R.drawable.picture));
+        bnv_Main.add(new MeowBottomNavigation.Model(4,R.drawable.ic_music));
+        bnv_Main.add(new MeowBottomNavigation.Model(5,R.drawable.ic_profile));
 
         bnv_Main.show(1,true);
         replace(new HomeFragment());
@@ -43,17 +43,17 @@ public class MainScreen extends AppCompatActivity {
                         break;
 
                     case 2:
-                        replace(new MusicFragment());
+                        replace(new ActivityFragment());
                         break;
 
                     case 3:
-                        replace(new ProfileFragment());
+                        replace(new GalleryFragment());
                         break;
                     case 4:
-                        replace(new ActivityFragment());
+                        replace(new MusicFragment());
                         break;
                     case 5:
-                        replace(new GalleryFragment());
+                        replace(new ProfileFragment());
                         break;
 
                 }

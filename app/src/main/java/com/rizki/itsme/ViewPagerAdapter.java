@@ -18,9 +18,9 @@ public class ViewPagerAdapter extends PagerAdapter {
 
     int images[] = {
 
-            R.drawable.image1,
-            R.drawable.image2,
-            R.drawable.image3
+            R.drawable.one,
+            R.drawable.ic_undraw_profile_re_4a55,
+            R.drawable.three
 
     };
 
