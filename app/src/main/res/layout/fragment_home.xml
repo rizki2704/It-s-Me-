@@ -1,18 +1,172 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    android:background="@drawable/ic_background"
-    android:gravity="center"
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/ic_background"
+    android:orientation="vertical">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Home"
-        android:textSize="24sp"
-        android:textColor="#ffffff"/>
+    <RelativeLayout
+        android:id="@+id/layout_profile"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginBottom="25dp"
+        android:background="@drawable/ic_view">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profile"
+            android:layout_width="125dp"
+            android:layout_height="125dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/foto" />
+
+        <TextView
+            android:id="@+id/nama"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_toRightOf="@id/profile"
+            android:text="Rizki Restu Illahi"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/nama"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/profile"
+            android:text="blabalbalbalba" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_hobby"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginBottom="25dp"
+        android:background="@drawable/ic_view">
+
+        <TextView
+            android:id="@+id/hobby"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:text="HOBBY"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/console"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_below="@id/hobby"
+            android:src="@drawable/console"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="50dp"/>
+        <ImageView
+            android:id="@+id/cinema"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_below="@id/hobby"
+            android:layout_toRightOf="@id/console"
+            android:src="@drawable/cinema"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="50dp"/>
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_below="@id/hobby"
+            android:layout_toRightOf="@id/cinema"
+            android:src="@drawable/music"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="50dp"/>
+        <TextView
+            android:id="@+id/cita"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/console"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:text="CITA - CITA"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
+        <ImageView
+            android:id="@+id/android"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_below="@id/cita"
+            android:src="@drawable/android"
+            android:layout_marginTop="10dp"
+            android:layout_centerHorizontal="true"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/android"
+            android:text="Android Developer"
+            android:textAlignment="center"
+            android:layout_marginTop="10dp"
+            android:textSize="20sp"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="@drawable/ic_view"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginBottom="25dp">
+        <TextView
+            android:id="@+id/food"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:text="FOOD AND DRINK"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/teriyaki"
+            android:layout_width="80dp"
+            android:layout_height="150dp"
+            android:layout_below="@id/food"
+            android:layout_marginTop="20dp"
+            android:text="Ayam Teriyaki"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            android:layout_marginLeft="25dp"/>
+        <TextView
+            android:id="@+id/teh"
+            android:layout_width="80dp"
+            android:layout_height="150dp"
+            android:layout_below="@id/food"
+            android:layout_toRightOf="@id/teriyaki"
+            android:layout_marginTop="20dp"
+            android:text="Teh Manis"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            android:layout_marginLeft="25dp"/>
+        <TextView
+            android:id="@+id/bubur"
+            android:layout_width="80dp"
+            android:layout_height="150dp"
+            android:layout_below="@id/food"
+            android:layout_toRightOf="@id/teh"
+            android:layout_marginTop="20dp"
+            android:text="Bubur Ayam"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            android:layout_marginLeft="25dp"/>
+    </RelativeLayout>
 
 </LinearLayout>

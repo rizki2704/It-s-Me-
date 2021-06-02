@@ -3,12 +3,17 @@ package com.rizki.itsme.fragment;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentActivity;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.rizki.itsme.Model;
 import com.rizki.itsme.R;
+import com.rizki.itsme.adapter.AdapterGallery;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -61,6 +66,29 @@ public class GalleryFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_gallery, container, false);
+        final View view = inflater.inflate(R.layout.fragment_gallery, container, false);
+        final FragmentActivity fragment = getActivity();
+        final RecyclerView recyclerView = view.findViewById(R.id.list_gallery);
+        recyclerView.setLayoutManager(new GridLayoutManager(fragment, 2));
+        Model model = new Model();
+
+        //gallery
+        int[] fotoGallery = {
+                R.drawable.foto, R.drawable.arsad
+        };
+        model.setFotoGallery(fotoGallery);
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                final AdapterGallery adapter = new AdapterGallery(fragment, model.getFotoGallery());
+                fragment.runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        recyclerView.setAdapter(adapter);
+                    }
+                });
+            }
+        }).start();
+        return view;
     }
 }
