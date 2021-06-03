@@ -78,11 +78,9 @@ public class MusicFragment extends Fragment {
         recyclerView1.setLayoutManager(layoutManager2);
 
         String[] judul_lagu_fav = {
-                "Simple Plan - Welcome To My Life", "The Hoobastank - Reason",
-                "Kygo - Stay", "Petit Biscuit - Sunset Lover", "Passenger - Let Her Go",
-                "Peterpan - Kukatakan Dengan Indah", "Peterpan - Kisah Cintaku",
-                "Chriye - Menunggumu", "Ed Sheeran - Photograph", "The Chainsmokers - All We Know",
-                "Andmesh Kamaleng - Cinta Luar Biasa"
+                "Sub Urban - Cradles", "Bruno Mars - Talking To The Moon",
+                "Pamungkas - To The Bone", "Lewis Capaldi - Before You Go", "Arianna Grande - Position",
+                "Daun Jatuh - Resah Jadi Luka", "Sia - Snowman", "Nadin Amizah - Bertaut"
         };
         String[] uri_video = {
                 "android.resource://" + getActivity().getPackageName() + "/" + R.raw.video1,

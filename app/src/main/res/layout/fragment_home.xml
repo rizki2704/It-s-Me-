@@ -42,7 +42,8 @@
             android:layout_marginLeft="20dp"
             android:layout_marginTop="10dp"
             android:layout_toRightOf="@id/profile"
-            android:text="blabalbalbalba" />
+            android:text="Rizki Restu Illahi, lahir pada hari kamis tanggal 27 April 2000 di Kota Subang. Saat ini merupakan
+seorang mahasiswa di Universitas Komputer Indonesia, dengan jurusan Teknik Informatika" />
 
     </RelativeLayout>
 

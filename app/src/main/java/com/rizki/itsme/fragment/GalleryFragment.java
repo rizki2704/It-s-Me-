@@ -69,12 +69,14 @@ public class GalleryFragment extends Fragment {
         final View view = inflater.inflate(R.layout.fragment_gallery, container, false);
         final FragmentActivity fragment = getActivity();
         final RecyclerView recyclerView = view.findViewById(R.id.list_gallery);
-        recyclerView.setLayoutManager(new GridLayoutManager(fragment, 2));
+        recyclerView.setLayoutManager(new GridLayoutManager(fragment, 3));
         Model model = new Model();
 
         //gallery
         int[] fotoGallery = {
-                R.drawable.foto, R.drawable.arsad
+                R.drawable.foto, R.drawable.arsad, R.drawable.gallery1,
+                R.drawable.gallery2, R.drawable.gallery3, R.drawable.gallery4,
+                R.drawable.gallery5, R.drawable.gallery6, R.drawable.gallery7, R.drawable.gallery8,
         };
         model.setFotoGallery(fotoGallery);
         new Thread(new Runnable() {

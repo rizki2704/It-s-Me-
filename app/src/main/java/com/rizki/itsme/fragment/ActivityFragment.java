@@ -94,11 +94,13 @@ public class ActivityFragment extends Fragment {
         model.setSubjects2(subjects2);
 
         String[] nama = {
-                "Rizki Restu","Arsyad"
+                "Nunu Rahayu","Arsyad","Benno Alif", "Irfan Andriansyah"
         };
         int[] foto = {
-                R.drawable.foto,
-                R.drawable.arsad
+                R.drawable.nunu,
+                R.drawable.arsad,
+                R.drawable.benno,
+                R.drawable.irpan
         };
         model.setNamaT(nama);
         model.setFotoT(foto);

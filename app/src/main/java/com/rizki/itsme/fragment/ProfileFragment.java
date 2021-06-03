@@ -1,12 +1,18 @@
 package com.rizki.itsme.fragment;
 
+import android.Manifest;
+import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.net.Uri;
 import android.os.Bundle;
-
-import androidx.fragment.app.Fragment;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
+import androidx.fragment.app.Fragment;
 
 import com.rizki.itsme.R;
 
@@ -61,6 +67,85 @@ public class ProfileFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_profile, container, false);
+        View view = inflater.inflate(R.layout.fragment_profile, container, false);
+        Button call, mail, ig, maps, about;
+
+        call = view.findViewById(R.id.btnCall);
+        mail = view.findViewById(R.id.btnMail);
+        ig = view.findViewById(R.id.btnIg);
+        maps = view.findViewById(R.id.btnMaps);
+        about = view.findViewById(R.id.btnAbout);
+
+        call.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                callphone("tel:" + "087734020763");
+            }
+        });
+        mail.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                sendMail("restur2411@gmail.com");
+            }
+        });
+        ig.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                goIg("https://www.instagram.com/restur2411/");
+            }
+        });
+        maps.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                goMaps("https://goo.gl/maps/3NWHVfvNZmeeZu3k7");
+            }
+        });
+
+
+        return view;
+    }
+
+    private void goMaps(String s) {
+        Uri uri = Uri.parse(s);
+        Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+        startActivity(intent);
+    }
+
+    private void goIg(String s) {
+        Uri uri = Uri.parse(s);
+        Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+        startActivity(intent);
+    }
+
+    private void sendMail(String s) {
+        Intent intent = new Intent(Intent.ACTION_SEND);
+        intent.setType("text/plain");
+        intent.putExtra(Intent.EXTRA_EMAIL, new String[]{s});
+        intent.putExtra(Intent.EXTRA_CC, new String[]{""});
+        intent.putExtra(Intent.EXTRA_SUBJECT, "");
+        intent.putExtra(Intent.EXTRA_TEXT, "");
+        try {
+            startActivity(Intent.createChooser(intent, null));
+        } catch (android.content.ActivityNotFoundException ex) {
+            //do something else
+        }
+    }
+
+    private void callphone(String s) {
+        final int REQUEST_PHONE_CALL = 1;
+
+        Uri uri = Uri.parse(s);
+        Intent intent = new Intent(Intent.ACTION_CALL);
+        intent.setData(uri);
+
+        if (ContextCompat.checkSelfPermission(getActivity(),
+                Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
+
+            ActivityCompat.requestPermissions(getActivity(),
+                    new String[]{Manifest.permission.CALL_PHONE}, REQUEST_PHONE_CALL);
+        } else {
+
+            startActivity(intent);
+        }
     }
 }
