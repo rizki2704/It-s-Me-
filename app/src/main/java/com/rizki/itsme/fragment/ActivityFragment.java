@@ -24,6 +24,7 @@ import com.rizki.itsme.adapter.AdapterFriends;
  * create an instance of this fragment.
  */
 public class ActivityFragment extends Fragment {
+    // 1 Juni 2021, 10118025 Rizki Restu Illahi IF-1
     public RecyclerView listActivity;
 
     // TODO: Rename parameter arguments, choose names that match
@@ -83,12 +84,14 @@ public class ActivityFragment extends Fragment {
         Model model = new Model();
 
         String[] subjects = {
-                "Running", "Musik", "Film"
+                "Bangun", "Mandi", "Kuliah", "Main FIFA", "Tidur"
         };
         int[] subjects2 = {
-                R.drawable.running,
-                R.drawable.music,
-                R.drawable.cinema
+                R.drawable.bangun,
+                R.drawable.mandi,
+                R.drawable.kuliah,
+                R.drawable.game,
+                R.drawable.tidur
         };
         model.setSubjects(subjects);
         model.setSubjects2(subjects2);

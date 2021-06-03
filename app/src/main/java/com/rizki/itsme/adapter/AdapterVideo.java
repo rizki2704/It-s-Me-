@@ -17,6 +17,7 @@ import com.rizki.itsme.R;
 import org.jetbrains.annotations.NotNull;
 
 public class AdapterVideo extends RecyclerView.Adapter<AdapterVideo.ViewHolder> {
+    // 2 Juni 2021, 10118025 Rizki Restu Illahi IF-1
     private final Context context;
     private final String[] video;
     private final String[] judulVideo;

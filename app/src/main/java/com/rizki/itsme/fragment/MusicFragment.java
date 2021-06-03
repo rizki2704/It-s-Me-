@@ -21,6 +21,7 @@ import com.rizki.itsme.adapter.AdapterVideo;
  * create an instance of this fragment.
  */
 public class MusicFragment extends Fragment {
+    // 2 Juni 2021, 10118025 Rizki Restu Illahi IF-1
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER

@@ -1,6 +1,7 @@
 package com.rizki.itsme;
 
 public class Model {
+    // 1 Juni 2021, 10118025 Rizki Restu Illahi IF-1
 private String[] subjects;
 private int[] subjects2;
 private String[] namaT;

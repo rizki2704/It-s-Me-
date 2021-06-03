@@ -1,6 +1,7 @@
 package com.rizki.itsme.fragment;
 
 import android.Manifest;
+import android.app.Dialog;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
@@ -22,6 +23,7 @@ import com.rizki.itsme.R;
  * create an instance of this fragment.
  */
 public class ProfileFragment extends Fragment {
+    // 3 Juni 2021, 10118025 Rizki Restu Illahi IF-1
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -98,6 +100,25 @@ public class ProfileFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 goMaps("https://goo.gl/maps/3NWHVfvNZmeeZu3k7");
+            }
+        });
+        about.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                final Dialog dialog = new Dialog(getActivity());
+                dialog.setContentView(R.layout.custom_dialog);
+
+                //
+                Button close = dialog.findViewById(R.id.btnclose);
+
+                close.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        dialog.dismiss();
+                    }
+                });
+
+                dialog.show();
             }
         });
 

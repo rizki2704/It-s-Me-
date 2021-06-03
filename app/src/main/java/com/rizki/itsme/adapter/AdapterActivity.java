@@ -15,6 +15,7 @@ import com.rizki.itsme.R;
 import org.jetbrains.annotations.NotNull;
 
 public class AdapterActivity extends RecyclerView.Adapter<AdapterActivity.ViewHolder> {
+    // 1 Juni 2021, 10118025 Rizki Restu Illahi IF-1
     private final Context context;
     private final String[] SubjectValues;
     private final int[] gambar_act;

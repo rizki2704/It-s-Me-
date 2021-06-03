@@ -17,6 +17,7 @@ import kotlin.Unit;
 import kotlin.jvm.functions.Function1;
 
 public class MainScreen extends AppCompatActivity {
+    // 1 Juni 2021, 10118025 Rizki Restu Illahi IF-1
 
     private MeowBottomNavigation bnv_Main;
 

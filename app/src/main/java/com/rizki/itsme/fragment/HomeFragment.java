@@ -16,6 +16,7 @@ import com.rizki.itsme.R;
  * create an instance of this fragment.
  */
 public class HomeFragment extends Fragment {
+    // 1 Juni 2021, 10118025 Rizki Restu Illahi IF-1
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
